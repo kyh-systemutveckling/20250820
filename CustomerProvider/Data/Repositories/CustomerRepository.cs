@@ -1,13 +1,29 @@
-﻿using Domain.Dtos;
+﻿using Data.Contexts;
+using Data.Mappers;
+using Domain.Dtos;
 using Domain.Interfaces;
 
 namespace Data.Repositories;
 
-public class CustomerRepository : ICustomerRepository
+public class CustomerRepository(CustomerContext context) : ICustomerRepository
 {
-    public Task<bool> CreateAsync(CustomerDto customer)
+    private readonly CustomerContext _context = context;
+
+    public async Task<bool> CreateAsync(CustomerDto customer)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var entity = CustomerMapper.ConvertTo(customer);
+
+            _context.Add(entity);
+            await _context.SaveChangesAsync();
+
+            return true;
+        }
+        catch 
+        {
+            return false;
+        }
     }
 
     public Task<bool> DeleteAsync(CustomerDto customer)

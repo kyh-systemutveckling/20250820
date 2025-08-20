@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\KYH\\CustomerProvider\\Domain\\Domain.csproj": {}
+    "C:\\Projects\\KYH\\20250820\\CustomerProvider\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\KYH\\CustomerProvider\\Domain\\Domain.csproj": {
+    "C:\\Projects\\KYH\\20250820\\CustomerProvider\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\KYH\\CustomerProvider\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Projects\\KYH\\20250820\\CustomerProvider\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Projects\\KYH\\CustomerProvider\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Projects\\KYH\\20250820\\CustomerProvider\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\hans\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\KYH\\CustomerProvider\\Domain\\obj\\",
+        "outputPath": "C:\\Projects\\KYH\\20250820\\CustomerProvider\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

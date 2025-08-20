@@ -1,0 +1,12 @@
+C:\Projects\KYH\20250820\CustomerProvider\Domain\bin\Debug\net9.0\Domain.deps.json
+C:\Projects\KYH\20250820\CustomerProvider\Domain\bin\Debug\net9.0\Domain.dll
+C:\Projects\KYH\20250820\CustomerProvider\Domain\bin\Debug\net9.0\Domain.pdb
+C:\Projects\KYH\20250820\CustomerProvider\Domain\obj\Debug\net9.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\KYH\20250820\CustomerProvider\Domain\obj\Debug\net9.0\Domain.AssemblyInfoInputs.cache
+C:\Projects\KYH\20250820\CustomerProvider\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.cs
+C:\Projects\KYH\20250820\CustomerProvider\Domain\obj\Debug\net9.0\Domain.csproj.CoreCompileInputs.cache
+C:\Projects\KYH\20250820\CustomerProvider\Domain\obj\Debug\net9.0\Domain.sourcelink.json
+C:\Projects\KYH\20250820\CustomerProvider\Domain\obj\Debug\net9.0\Domain.dll
+C:\Projects\KYH\20250820\CustomerProvider\Domain\obj\Debug\net9.0\refint\Domain.dll
+C:\Projects\KYH\20250820\CustomerProvider\Domain\obj\Debug\net9.0\Domain.pdb
+C:\Projects\KYH\20250820\CustomerProvider\Domain\obj\Debug\net9.0\ref\Domain.dll
