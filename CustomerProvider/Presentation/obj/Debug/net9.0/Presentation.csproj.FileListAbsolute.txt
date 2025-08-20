@@ -167,3 +167,4 @@ C:\Projects\KYH\20250820\CustomerProvider\Presentation\obj\Debug\net9.0\refint\P
 C:\Projects\KYH\20250820\CustomerProvider\Presentation\obj\Debug\net9.0\Presentation.pdb
 C:\Projects\KYH\20250820\CustomerProvider\Presentation\obj\Debug\net9.0\Presentation.genruntimeconfig.cache
 C:\Projects\KYH\20250820\CustomerProvider\Presentation\obj\Debug\net9.0\ref\Presentation.dll
+C:\Projects\KYH\20250820\CustomerProvider\Presentation\obj\Debug\net9.0\Presentation.MvcApplicationPartsAssemblyInfo.cs

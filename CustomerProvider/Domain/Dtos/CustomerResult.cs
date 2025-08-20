@@ -11,3 +11,8 @@ public class CustomerObjectResult : CustomerResult
 {
     public CustomerDto? Result { get; set; }
 }
+
+public class CustomerObjectListResult : CustomerResult
+{
+    public IEnumerable<CustomerDto>? Result { get; set; }
+}

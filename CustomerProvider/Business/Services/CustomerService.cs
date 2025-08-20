@@ -1,101 +1,221 @@
 ﻿using Domain.Dtos;
 using Domain.Interfaces;
-using System.Data;
+
 
 namespace Business.Services;
 
-public class CustomerService(ICustomerRepository customerRepository) // : ICustomerService
+public class CustomerService(ICustomerRepository customerRepository) : ICustomerService
 {
-    //private readonly ICustomerRepository _customerRepository = customerRepository;
+    private readonly ICustomerRepository _customerRepository = customerRepository;
 
-    //public async Task<CustomerObjectResult> CreateCustomerAsync(CustomerDto customer)
-    //{
+    public async Task<CustomerObjectResult> CreateCustomerAsync(CustomerDto customer)
+    {
+        // Check Null-Values
+        if (customer is null || customer.CustomerName == "")
+            return new CustomerObjectResult
+            {
+                Succeeded = false,
+                StatusCode = 400,
+                Error = "Invalid attributes or empty object"
+            };
 
-    //    // kontrollera att in-data är korrekt
-    //    if (customer is null)
-    //    {
-    //        return new CustomerObjectResult
-    //        {
-    //            Succeeded = false,
-    //            StatusCode = 400,
-    //            Error = "customer payload is null"
-    //        };
-    //    }
+        // Check if Customer Exists
+        var existing = await _customerRepository.GetByNameAsync(customer.CustomerName);
+        if (existing is not null)
+            return new CustomerObjectResult
+            {
+                Succeeded = false,
+                StatusCode = 409,
+                Error = "Customer already exists"
+            };
 
-    //    // kontrollera så att kunden inte redan finns
-    //    var existing = await _customerRepository.GetAsync(customer);
-    //    if (existing is not null)
-    //    {
-    //        return new CustomerObjectResult
-    //        {
-    //            Succeeded = false,
-    //            StatusCode = 409, // Conflict
-    //            Error = "customer already exists"
-    //        };
-    //    }
+        try
+        {
+            customer.Id = Guid.NewGuid().ToString();
 
-    //    // skapa en själva kunden
-    //    try
-    //    {
-    //        // Create the customer
-    //        var created = await _customerRepository.CreateAsync(customer);
+            var result = await _customerRepository.CreateAsync(customer);
+            if (result)
+                return new CustomerObjectResult
+                {
+                    Succeeded = true,
+                    StatusCode = 201,
+                };
 
-    //        if (!created)
-    //        {
-    //            return new CustomerObjectResult
-    //            {
-    //                Succeeded = false,
-    //                StatusCode = 500,
-    //                Error = "failed to create customer"
-    //            };
-    //        }
+            throw new Exception("Unable to create customer");
+        }
 
-    //        // 4) Return created
-    //        existing = await _customerRepository.GetAsync(customer);
-    //        if (existing is not null)
-    //        {
-    //            return new CustomerObjectResult
-    //            {
-    //                Succeeded = true,
-    //                StatusCode = 201, 
-    //                Result = existing,
-    //            };
-    //        }
-    //    }
-    //    catch (Exception ex)
-    //    {
-    //        return new CustomerObjectResult
-    //        {
-    //            Succeeded = false,
-    //            StatusCode = 500,
-    //            Error = ex.Message
-    //        };
-    //    }
+        catch (Exception ex)
+        {
+            return new CustomerObjectResult
+            {
+                Succeeded = false,
+                StatusCode = 500,
+                Error = ex.Message
+            };
+        }
+    }
 
-    //}
+    public async Task<CustomerResult> DeleteCustomerAsync(string id)
+    {
+        // Check Null-Values
+        if (string.IsNullOrWhiteSpace(id))
+            return new CustomerResult
+            {
+                Succeeded = false,
+                StatusCode = 400,
+                Error = "Invalid id"
+            };
 
-    //public Task<CustomerObjectResult> GetCustomerByIdAsync(string id)
-    //{
-    //    throw new NotImplementedException();
-    //}
 
-    //public Task<CustomerObjectResult> GetCustomerByNameAsync(string name)
-    //{
-    //    throw new NotImplementedException();
-    //}
+        // Check if Customer Exists
+        var existing = _customerRepository.GetByIdAsync(id);
+        if (existing is null)
+            return new CustomerResult
+            {
+                Succeeded = false,
+                StatusCode = 404,
+                Error = "Customer Not Found"
+            };
 
-    //public Task<IEnumerable<CustomerObjectResult>> GetCustomersAsync()
-    //{
-    //    throw new NotImplementedException();
-    //}
+        // Remove Customer
+        try
+        {
+            var result = await _customerRepository.DeleteAsync(id);
+            if (result)
+                return new CustomerResult
+                {
+                    Succeeded = true,
+                    StatusCode = 204,
+                };
 
-    //public Task<CustomerObjectResult> UpdateCustomerAsync(string id, CustomerDto customer)
-    //{
-    //    throw new NotImplementedException();
-    //}
+            throw new Exception("Unable to delete customer");
+        }
 
-    //public Task<CustomerResult> DeleteCustomerAsync(string id)
-    //{
-    //    throw new NotImplementedException();
-    //}
+        catch (Exception ex)
+        {
+            return new CustomerResult
+            {
+                Succeeded = false,
+                StatusCode = 500,
+                Error = ex.Message
+            };
+        }
+    }
+
+    public async Task<CustomerObjectResult> GetCustomerByIdAsync(string id)
+    {
+        // Check Null-Values
+        if (string.IsNullOrWhiteSpace(id))
+            return new CustomerObjectResult
+            {
+                Succeeded = false,
+                StatusCode = 400,
+                Error = "Invalid id"
+            };
+
+        // Get Customer
+        var customer = await _customerRepository.GetByIdAsync(id);
+        if (customer is not null)
+            return new CustomerObjectResult
+            {
+                Succeeded = true,
+                StatusCode = 200,
+                Result = customer
+            };
+
+        return new CustomerObjectResult
+        {
+            Succeeded = false,
+            StatusCode = 404,
+            Error = "Customer Not Found"
+        };
+    }
+
+    public async Task<CustomerObjectResult> GetCustomerByNameAsync(string name)
+    {
+        // Check Null-Values
+        if (string.IsNullOrWhiteSpace(name))
+            return new CustomerObjectResult
+            {
+                Succeeded = false,
+                StatusCode = 400,
+                Error = "Invalid id"
+            };
+
+        // Get Customer
+        var customer = await _customerRepository.GetByNameAsync(name);
+        if (customer is not null)
+            return new CustomerObjectResult
+            {
+                Succeeded = true,
+                StatusCode = 200,
+                Result = customer
+            };
+
+        return new CustomerObjectResult
+        {
+            Succeeded = false,
+            StatusCode = 404,
+            Error = "Customer Not Found"
+        };
+    }
+
+    public async Task<CustomerObjectListResult> GetCustomersAsync()
+    {
+        var customers = await _customerRepository.GetAllAsync();
+
+        return new CustomerObjectListResult
+        {
+            Succeeded = true,
+            StatusCode = 200,
+            Result = customers
+        };
+    }
+
+    public async Task<CustomerResult> UpdateCustomerAsync(string id, CustomerDto customer)
+    {
+        // Check Null-Values
+        if (string.IsNullOrWhiteSpace(id) || customer is null)
+            return new CustomerResult
+            {
+                Succeeded = false,
+                StatusCode = 400,
+                Error = "Invalid id or object"
+            };
+
+
+        // Check if Customer Exists
+        var existing = _customerRepository.GetByIdAsync(id);
+        if (existing is null)
+            return new CustomerResult
+            {
+                Succeeded = false,
+                StatusCode = 404,
+                Error = "Customer Not Found"
+            };
+
+        // Update Customer
+        try
+        {
+            var result = await _customerRepository.UpdateAsync(customer);
+            if (result)
+                return new CustomerResult
+                {
+                    Succeeded = true,
+                    StatusCode = 204,
+                };
+
+            throw new Exception("Unable to update customer");
+        }
+
+        catch (Exception ex)
+        {
+            return new CustomerResult
+            {
+                Succeeded = false,
+                StatusCode = 500,
+                Error = ex.Message
+            };
+        }
+    }
 }
