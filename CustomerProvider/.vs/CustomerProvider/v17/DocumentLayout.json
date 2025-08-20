@@ -1,0 +1,147 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projects\\KYH\\CustomerProvider\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5DC0B9C9-25EE-41BA-B1AE-567592BA6E5D}|Presentation\\Presentation.csproj|c:\\projects\\kyh\\customerprovider\\presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DC0B9C9-25EE-41BA-B1AE-567592BA6E5D}|Presentation\\Presentation.csproj|solutionrelative:presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9359A591-8268-4C0B-A005-7ECBABC21D92}|Business\\Business.csproj|c:\\projects\\kyh\\customerprovider\\business\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9359A591-8268-4C0B-A005-7ECBABC21D92}|Business\\Business.csproj|solutionrelative:business\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04187AB6-B72D-4EEB-B429-A9401B20AF17}|Domain\\Domain.csproj|c:\\projects\\kyh\\customerprovider\\domain\\interfaces\\icustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04187AB6-B72D-4EEB-B429-A9401B20AF17}|Domain\\Domain.csproj|solutionrelative:domain\\interfaces\\icustomerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04187AB6-B72D-4EEB-B429-A9401B20AF17}|Domain\\Domain.csproj|c:\\projects\\kyh\\customerprovider\\domain\\dtos\\customerresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04187AB6-B72D-4EEB-B429-A9401B20AF17}|Domain\\Domain.csproj|solutionrelative:domain\\dtos\\customerresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DDF94B7-9335-40C8-9393-196EC36EA243}|Data\\Data.csproj|c:\\projects\\kyh\\customerprovider\\data\\repositories\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DDF94B7-9335-40C8-9393-196EC36EA243}|Data\\Data.csproj|solutionrelative:data\\repositories\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04187AB6-B72D-4EEB-B429-A9401B20AF17}|Domain\\Domain.csproj|c:\\projects\\kyh\\customerprovider\\domain\\interfaces\\icustomerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04187AB6-B72D-4EEB-B429-A9401B20AF17}|Domain\\Domain.csproj|solutionrelative:domain\\interfaces\\icustomerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04187AB6-B72D-4EEB-B429-A9401B20AF17}|Domain\\Domain.csproj|c:\\projects\\kyh\\customerprovider\\domain\\dtos\\customerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04187AB6-B72D-4EEB-B429-A9401B20AF17}|Domain\\Domain.csproj|solutionrelative:domain\\dtos\\customerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomerService.cs",
+              "DocumentMoniker": "C:\\Projects\\KYH\\CustomerProvider\\Business\\Services\\CustomerService.cs",
+              "RelativeDocumentMoniker": "Business\\Services\\CustomerService.cs",
+              "ToolTip": "C:\\Projects\\KYH\\CustomerProvider\\Business\\Services\\CustomerService.cs",
+              "RelativeToolTip": "Business\\Services\\CustomerService.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T08:27:03.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CustomerResult.cs",
+              "DocumentMoniker": "C:\\Projects\\KYH\\CustomerProvider\\Domain\\Dtos\\CustomerResult.cs",
+              "RelativeDocumentMoniker": "Domain\\Dtos\\CustomerResult.cs",
+              "ToolTip": "C:\\Projects\\KYH\\CustomerProvider\\Domain\\Dtos\\CustomerResult.cs",
+              "RelativeToolTip": "Domain\\Dtos\\CustomerResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T08:20:18.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ICustomerService.cs",
+              "DocumentMoniker": "C:\\Projects\\KYH\\CustomerProvider\\Domain\\Interfaces\\ICustomerService.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\ICustomerService.cs",
+              "ToolTip": "C:\\Projects\\KYH\\CustomerProvider\\Domain\\Interfaces\\ICustomerService.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\ICustomerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T08:11:04.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomerRepository.cs",
+              "DocumentMoniker": "C:\\Projects\\KYH\\CustomerProvider\\Data\\Repositories\\CustomerRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\CustomerRepository.cs",
+              "ToolTip": "C:\\Projects\\KYH\\CustomerProvider\\Data\\Repositories\\CustomerRepository.cs",
+              "RelativeToolTip": "Data\\Repositories\\CustomerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T08:08:10.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CustomerDto.cs",
+              "DocumentMoniker": "C:\\Projects\\KYH\\CustomerProvider\\Domain\\Dtos\\CustomerDto.cs",
+              "RelativeDocumentMoniker": "Domain\\Dtos\\CustomerDto.cs",
+              "ToolTip": "C:\\Projects\\KYH\\CustomerProvider\\Domain\\Dtos\\CustomerDto.cs",
+              "RelativeToolTip": "Domain\\Dtos\\CustomerDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T08:06:19.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ICustomerRepository.cs",
+              "DocumentMoniker": "C:\\Projects\\KYH\\CustomerProvider\\Domain\\Interfaces\\ICustomerRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\ICustomerRepository.cs",
+              "ToolTip": "C:\\Projects\\KYH\\CustomerProvider\\Domain\\Interfaces\\ICustomerRepository.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\ICustomerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T07:57:39.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projects\\KYH\\CustomerProvider\\Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "Presentation\\Program.cs",
+              "ToolTip": "C:\\Projects\\KYH\\CustomerProvider\\Presentation\\Program.cs",
+              "RelativeToolTip": "Presentation\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T07:37:40.799Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
